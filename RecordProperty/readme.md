@@ -21,7 +21,7 @@ it's not a "record helper", it's just a record with public properties that match
 
 4- the component need also to register custom properties for the record because Delphi will not handle them (this could be done with a [JSON serializer](https://github.com/tothpaul/LetsEncryptDelphi/blob/master/lib/Execute.JSON.pas) BTW)
 
-this if or runtime code when you type "Component.Values.Str := 'xxx'" for instance, 
+this if for runtime code when you type "Component.Values.Str := 'xxx'" for instance, 
 now we want the properties in the object inspector; for that you'll need to register a PropertyEditor.
 
-I've created a TRecordPropertyProxy, a TPersisent class that publish the record properties so Delphi can deal with that without other hacks (see [RSP-19303](https://quality.embarcadero.com/browse/RSP-19303), and [RSP-20848](https://quality.embarcadero.com/browse/RSP-20848)).
+I've created a TRecordPropertyProxy, a TPersistent class that publish the record properties so Delphi can deal with that without other hacks (see [RSP-19303](https://quality.embarcadero.com/browse/RSP-19303), and [RSP-20848](https://quality.embarcadero.com/browse/RSP-20848)).
