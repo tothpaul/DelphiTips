@@ -14,11 +14,11 @@ for SQL I have to write things like that:
 ```
 you can also write things like that to avoid field name lookups
 ```
-	 Query.SQL := 'SELECT Field1, Field2... WHERE ID = :ID';
-	 Query.Params[0].AsInteger := id;
-	 Query.Open;
-	 if Query.Fields[0].AsInteger = 1 then
-		 ShowMessage(Query.Fields[1].AsString;
+ Query.SQL := 'SELECT Field1, Field2... WHERE ID = :ID';
+ Query.Params[0].AsInteger := id;
+ Query.Open;
+ if Query.Fields[0].AsInteger = 1 then
+	 ShowMessage(Query.Fields[1].AsString;
 ```
 but add a field in the SQL and all the index can change
 
